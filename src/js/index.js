@@ -1,2 +1,2 @@
-console.log('a');
-alert('hello world');
+// console.log('a');
+// alert('hello world');
