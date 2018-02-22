@@ -1,8 +1,13 @@
-import event from './event.js'
+import '../common/polyfill.js'
+import bindEvent from './event.js'
 import render from './render.js'
 
-window.login = (opts) => {
-    const container = opts.container
-    render(container)
-    event()
+const login = (opts = {}) => {
+    const defaultOpts = {
+        loginBtnText: '登录'
+    }
+    const options = Object.assign(defaultOpts,opts)
+    render(options)
+    bindEvent(options)
 }
+export {login}

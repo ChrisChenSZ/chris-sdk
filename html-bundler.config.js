@@ -1,3 +1,4 @@
+var fileInclude  = require('gulp-file-include');
 var destMod = {
     output: './dist/dest',
     minify: true,
@@ -13,7 +14,7 @@ var destMod = {
         js: [],
         css: [],
         imgs: [],
-        html: []
+        html: [{ func: fileInclude, opts: { prefix: '@@', basepath: '@file'}}]
     },//自定义任务
     define: {
         __DEST__: true,
@@ -87,7 +88,7 @@ module.exports = {
             js: [],
             css: [],
             imgs: [],
-            html: []
+            html: [{ func: fileInclude, opts: { prefix: '@@', basepath: '@file'}}]
         },//自定义任务, 格式样例[{func: sass, opts: {logger: true}}, {func: task, opts: null }]
         server: true,
         buildTarget: 'default'

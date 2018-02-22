@@ -1,7 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const vendors = [];
+const vendors = [
+    'es5-shim',
+    'babel-polyfill',
+    'es6-promise/auto',
+    'fetch-detector',
+    'fetch-ie8'
+];
 
 const options = {
   output: {
