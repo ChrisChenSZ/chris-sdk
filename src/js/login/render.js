@@ -1,7 +1,7 @@
 const template = (opts = {}) => {
     const tpl = `
     <div class="aaa">
-        <p>你和在一起 ? </p>
+        <p>你和在一起 ? 111</p>
     </div>`
     return tpl
 }
