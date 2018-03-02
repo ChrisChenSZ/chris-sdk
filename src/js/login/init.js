@@ -4,7 +4,11 @@ import render from './render.js'
 
 const login = (opts = {}) => {
     const defaultOpts = {
-        loginBtnText: '登录'
+        loginBtnText: '登录',
+        accountPlaceHolder: '手机号/邮箱/账号',
+        passwordPlaceHolder: '请填写密码',
+        accountLabel: '',
+        passwordLabel: ''
     }
     const options = Object.assign(defaultOpts,opts)
     render(options)
