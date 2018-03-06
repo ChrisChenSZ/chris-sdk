@@ -1,3 +1,4 @@
+import {$} from '../common/utils.js'
 const template = (opts = {}) => {
     const autoCompleteTpl = `
           <div id="autocompletebox">
@@ -26,7 +27,7 @@ const template = (opts = {}) => {
 
 export default (conf = {}) => {
     conf.container.innerHTML = template(conf)
-    const autocompleteBox = document.getElementById('autocompletebox')
+    const autocompleteBox = $('autocompletebox')
     if(autocompleteBox){
         autocompleteBox.style.height = '0'
         autocompleteBox.style.opacity = '0'
