@@ -8,7 +8,8 @@ const login = (opts = {}) => {
         accountPlaceHolder: '手机号/邮箱/账号',
         passwordPlaceHolder: '请填写密码',
         accountLabel: '',
-        passwordLabel: ''
+        passwordLabel: '',
+        showRemember: true
     }
     const options = Object.assign(defaultOpts,opts)
     render(options)
